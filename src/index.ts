@@ -247,7 +247,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const tab = ["today", "yesterday", "week", "all"].includes(a.tab) ? a.tab : "today";
       params.set("tab", tab);
       if (a.q) params.set("q", String(a.q).slice(0, 100));
-      if (a.tag) params.set("tag", encodeURIComponent(String(a.tag).toLowerCase().slice(0, 30)));
+      if (a.tag) params.set("tag", String(a.tag).toLowerCase().slice(0, 30));
       if (a.page) params.set("page", String(Math.max(1, parseInt(String(a.page), 10) || 1)));
 
       const data = await apiRequest(`/api/posts?${params.toString()}`, {}, false);
