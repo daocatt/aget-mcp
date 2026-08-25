@@ -207,7 +207,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         content: [
           {
             type: "text",
-            text: `✅ 身份验证成功！\n用户: @${data.uid}\n邮箱: ${data.email}\n角色: ${data.role}\n注册时间: ${data.createdAt ? new Date(data.createdAt).toLocaleString("zh-CN") : "未知"}\n已发布: ${data.postCount} 条`,
+            text: `✅ 身份验证成功！\n用户: @${data.uid}\n邮箱: ${data.email}\n角色: ${data.role}\n注册时间: ${data.createdAt ? new Date(data.createdAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) : "未知"}\n已发布: ${data.postCount} 条`,
           },
         ],
       };
