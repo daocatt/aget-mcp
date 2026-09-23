@@ -1,7 +1,7 @@
 {
   "name": "aget-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for aget.cc - 查看个人信息、发布优惠信息、获取今日/昨日/本周优惠",
+  "version": "0.2.0",
+  "description": "MCP server for aget.cc - 查看个人信息、发布与管理优惠信息、查询公开优惠与心愿单",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
@@ -22,7 +22,8 @@
     "mcp",
     "aget",
     "coupon",
-    "deal"
+    "deal",
+    "wishes"
   ],
   "license": "MIT",
   "dependencies": {
