@@ -6,6 +6,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
+import pkg from "../package.json" with { type: "json" };
 
 // Configuration
 const BASE_URL = (process.env.AGET_BASE_URL || "https://aget.cc").replace(/\/+$/, "");
@@ -108,7 +109,7 @@ function jsonResult(data: any) {
 const server = new Server(
   {
     name: "aget-mcp",
-    version: "0.2.0",
+    version: pkg.version,
   },
   {
     capabilities: {
